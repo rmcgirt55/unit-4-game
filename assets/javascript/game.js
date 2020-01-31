@@ -1,11 +1,11 @@
 $(document).ready(function(){
     var Random=Math.floor(Math.random()*101+19)
 
-    $('#randomNumber').text(random);
-    var red= Math.floor(Math.random()*11+1)
-    var yellow= Math.floor(Math.random()*11+1)
-    var green= Math.floor(Math.random()*11+1)
-    var blue= Math.floor(Math.random()*11+1)
+    $('#randomNumber').text(Random);
+    var redG= Math.floor(Math.random()*11+1)
+    var yellowG= Math.floor(Math.random()*11+1)
+    var greenG= Math.floor(Math.random()*11+1)
+    var blueG= Math.floor(Math.random()*11+1)
     var userTotal=0;
     var wins=0;
     var losses=0;
@@ -16,15 +16,15 @@ $(document).ready(function(){
 
         Random=Math.floor(Math.random()*101+19);
         $('#randomNumber').text(random);
-        red= Math.floor(Math.random()*11+1);
-        yellow= Math.floor(Math.random()*11+1);
-        green= Math.floor(Math.random()*11+1);
-        blue= Math.floor(Math.random()*11+1);
+        redG= Math.floor(Math.random()*11+1);
+        yellowG= Math.floor(Math.random()*11+1);
+        greenG= Math.floor(Math.random()*11+1);
+        blueG= Math.floor(Math.random()*11+1);
         userTotal=0;
         $('#finalTotal').text(userTotal);
     }
     function winner(){
-        allert("Winner");
+        alert("Winner");
         wins++;
         $('#numberWins').text(wins);
         reset()
@@ -36,10 +36,10 @@ $(document).ready(function(){
         reset()
     }
 
-    $('#blue').one ('click', function(){
-        userTotal = userTotal + blue;
-        $('#finalTototal').text(userTotal);
-        if (userTotal === Random){
+    $('#blue').on ('click', function(){
+        userTotal = userTotal + blueG;
+        $('#finalTotal').text(userTotal);
+        if (userTotal == Random){
             winner();
         }
         else if ( userTotal> Random){
@@ -47,35 +47,35 @@ $(document).ready(function(){
         }
     })
 
-    $('#red').one ('click', function(){
-        userTotal = userTotal+ red;
+    $('#red').on ('click', function(){
+        userTotal = userTotal+ redG;
         $('#finalTotal').text(userTotal);
-        if (userTotal === Random){
+        if (userTotal == Random){
             winner();
         }
-        else if (userTotal>random){
+        else if (userTotal>Random){
             loser();
         }
     })
 
-    $('#yellow').one ('click', function(){
-        userTotal = userTotal+ red;
+    $('#yellow').on ('click', function(){
+        userTotal = userTotal+ yellowG;
         $('#finalTotal').text(userTotal);
-        if (userTotal === Random){
+        if (userTotal == Random){
             winner();
         }
-        else if (userTotal>random){
+        else if (userTotal>Random){
             loser();
         }
     })
 
-    $('#green').one ('click', function(){
-        userTotal = userTotal+ red;
+    $('#green').on ('click', function(){
+        userTotal = userTotal+ greenG;
         $('#finalTotal').text(userTotal);
-        if (userTotal === Random){
+        if (userTotal == Random){
             winner();
         }
-        else if (userTotal>random){
+        else if (userTotal>Random){
             loser();
         }
     });
