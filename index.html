@@ -4,77 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>unit-4-game</title>
+    <title>Document</title>
 </head>
 <body>
     <div class="header">
-        <div class="wrapper">
-            <h1>Crystal Game</h1>
-        </div>
-    </div>
-    <h3>Instructions</h3>
-    <p>There are four crystals bellow, each one will have a random value assigned at the start of each round. Try to match the sum to the magic number also below.</p>
+        <h1>Crystal Game</h1>
 
-    <div class="container-fluid"id="magicNumber">
-        <div class="row">
-        <div class="col-sm">
-            <input type="image" src="" class="image" id="gem" />
-                    <div id="gem"></div>
-        </div>
-    </div class="col-sm">
-    <p id="losses">Losses: </p>
-        </div>
-        <div class="col-sm">
-    <p id="wins">Wins: </p>
     </div>
-    </div>
-    
-    
-    <div class="container-fluid" id="gems">
-        <div class="row">
-        <div class="col-sm">
-            <input type="image" src=""
-            class="image" id="" />
-</div>
-<div class="col-sm">
-    <input type="image" src=""
-    class="image" id="" />
-</div>
-<div class="col-sm">
-    <input type="image" src=""
-    class="image" id="" />
-</div>
-<div class="col-sm">
-    <input type="image" src=""
-    class="image" id="" />
-</div>
-        </div>
+    <p> There are four crystals below each are assigned a random value at the start of each round. Try to match the sum to that of the magic bumber below.</p>
+
+    <div class="winsAndLosses">
+        <h2>Wins:
+            <span id= "numberWins"></span>
+            <hr>
+            Losses:
+            <span id="numberLosses"></span>
+        </h2>
     </div>
 
-    <div class="container-fluid" id="sum">
-    <div class="row">
-        <div class="col-lg">
-            Current total:
-        </div>
-        <div class="col-lg">
-        </div>
-        <div class="col-lg">
-        </div>
+    <div class="gems">
+        <img src="" class=diamondImage id="blue">
+		<img src="" class=diamondImage id="green">
+		<img src="" class=diamondImage id= "red">
+		<img src="" class=diamondImage id= "yellow">  
     </div>
-    <div class="row">
-        <div class="col-lg" id="magicNumber">
-        </div>
-        <div class="col-lg">
-        </div>
-        <div class="col-lg">
+    
+    <div class="userTotal">
+        <h2>Score
+            <span id="finalTotal"></span>
+        </h2>
+    </div>
+    <script type="text/javascript" src="assets/javascript/game.js"></script>
 
-        </div>
-    </div>
-    </div>
-    <div class="container-fluid" id="magicNumber"></div>
-    
-    <script src="assets/javascript/game.js" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js">
-    </script>
-    </body>
-    
-    </html>
+</body>
+</html>
